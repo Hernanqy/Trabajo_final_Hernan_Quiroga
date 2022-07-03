@@ -1,6 +1,6 @@
 import { Formik, Form, Field } from "formik";
 import { usePosts  } from "../../context/postContext";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams,Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export function Formulario() {
@@ -27,6 +27,12 @@ export function Formulario() {
   return (
     <div className="m-10 flex items-center justify-center ">
       <div className="bg-zinc-800 p-10 shadow-md shadow-black">
+     <header className="flex justify-between">
+   <h1 className="text-indigo-500"> Publicacion</h1>
+   <Link to="/" className="text-gray-400 text-sm hover:text-gray-300">Volver</Link>
+
+     </header>
+     
       <Formik
         className=" bg-orange-500"
         initialValues={post}
@@ -50,7 +56,7 @@ export function Formulario() {
         <Form onSubmit={handleSubmit} className="bg-gray-400 h-30 flex-col justify-center items-center">
             <label
               htmlFor="title"
-              className="text-lg bg-teal-400 box-border rounded-md grow-0 block font-bold text-center text-black-400 m-1 p-10"
+              className="text-lg bg-indigo-300 box-border rounded-md grow-0 block font-bold text-center text-black-400 m-1 p-10"
             >
               Title
             </label>
@@ -59,7 +65,7 @@ export function Formulario() {
 
             <label
               htmlFor="body"
-              className="text-lg block  bg-teal-400 rounded-md text-center font-bold text-black-400 m-1 p-10"
+              className="text-lg block  bg-indigo-400 rounded-md text-center font-bold text-black-400 m-1 p-10"
             >
               Description
             </label>
