@@ -12,6 +12,6 @@ router.get("/:id", onePost)
 
 router.delete("/:id", deletePost)
 
-router.patch("/:id",editOne)
+router.patch("/:id",uploadFile.single("file"),editOne)
 
 module.exports = router

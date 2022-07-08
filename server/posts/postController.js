@@ -43,9 +43,8 @@ const onePost = async(req, res, next) => {
 
 const addOne =async (req,res,next) =>{
      /* const cleanBody = matchedData(req)/*/
-     console.log("body",req.body)
-     console.log("body",req.file)
-   const image= `${public_url}/${req.file.filename}`
+     
+        const image= `${public_url}/${req.file.filename}`
    const dbResponse= await addNewPost({userid:1,...req.body,image })
    
    
@@ -56,11 +55,14 @@ dbResponse instanceof Error ? next(dbResponse)
 }
 
 const editOne = async (req, res, next) => {
-    if(notNumber(req.params.id, next)) return;
+   
     
-    const dbResponse = await editOnePost(+req.params.id, {...req.body})
-    console.log("dbresponse", dbResponse);
+    if(notNumber(req.params.id, next)) return;
+    const image= `${public_url}/${req.file.filename}`
+    const dbResponse = await editOnePost(+req.params.id, {...req.body, image})
+
     if(dbResponse instanceof Error) return next (dbResponse);
+
     dbResponse.affectedRows ? res.status(200).json({message: "Post modified"}) :  next() 
 };
 

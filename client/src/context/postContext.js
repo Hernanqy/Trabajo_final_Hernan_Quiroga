@@ -36,7 +36,6 @@ export const PostProvider = ({ children }) => {
       
   }
   
-
   const createPost = async (post) => {
   
     try {
@@ -67,7 +66,7 @@ export const PostProvider = ({ children }) => {
   };
 
   const updatePost = async (id, post) => {
-    
+    console.log("estos es el context", id, post)
     try {
       const res = await updatePostRequest(id, post);
       

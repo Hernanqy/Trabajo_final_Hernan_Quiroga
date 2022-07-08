@@ -39,6 +39,7 @@ export function Formulario() {
         onSubmit={async (values, actions) => {
          
           if(params.id) {
+            console.log("esto es el formik", params.id, values)
           await updatePost(params.id, values)
           navigate("/")
           

@@ -2,6 +2,9 @@
 
 import * as React from "react";
 export default function Form() {
+
+
+    
     return (
         <div className="m-10 flex items-center justify-center ">
         <div className="bg-white px-10 py-20 rounded-3xl border-2 border-gray-100"> 

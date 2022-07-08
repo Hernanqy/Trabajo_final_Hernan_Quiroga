@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./componets/pages/Home";
 import Formulario from "./componets/pages/Formulario";
-import Products from "./componets/pages/Products";
 import SignUp from "./componets/pages/SignUp";
 import Footer from "./componets/Footer";
 import { PostProvider } from "./context/postContext";
