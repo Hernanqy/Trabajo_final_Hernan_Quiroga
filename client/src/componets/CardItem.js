@@ -48,7 +48,7 @@ export function CardItem({post}) {
   return (
     <>
       <li className="cards__item">
-        <div className="cards__item__link text-lg text-center bg-transparent" to="#" onClick={() => navigate(`/posts/${post.id}`)} >
+        <div className="cards__item__link text-lg text-center bg-yellow-500" to="#"  >
           <figure className="cards__item__pic-wrap  " data-category={post.title}>
             <img
               className="cards__item__img"
@@ -60,10 +60,17 @@ export function CardItem({post}) {
             <h5 className="cards__item__text">{post.body}</h5>
             
             <button
-              className="bg-red-600 text-sm px-2 py-1 rounded-sm"
+              className="bg-red-500 text-sm px-2 py-1 rounded-xl "
               onClick={() => handleDelete(post.id)}
             >
               Eliminar
+            </button>
+
+            <button
+              className="bg-indigo-400 text-sm px-2 py-1 rounded-xl "
+              onClick={() => navigate(`/posts/${post.id}`)}
+            >
+              Editar
             </button>
           </div>
         </div>

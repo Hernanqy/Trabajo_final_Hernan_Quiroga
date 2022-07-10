@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./componets/pages/Home";
 import Formulario from "./componets/pages/Formulario";
 import SignUp from "./componets/pages/SignUp";
+import Trailers from "./componets/pages/Trailers";
 import Footer from "./componets/Footer";
 import { PostProvider } from "./context/postContext";
 import {Toaster} from 'react-hot-toast'
@@ -20,6 +21,7 @@ function App() {
             <Route path="/formulario" element={<Formulario />} />
             <Route path="/posts/:id" element={<Formulario />} />
             <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/trailers" element={<Trailers />} />
           </Routes>
           <Footer />
         </Router>

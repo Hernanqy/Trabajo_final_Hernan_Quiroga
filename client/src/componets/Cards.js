@@ -24,11 +24,7 @@ function Cards() {
             
             <CardItem 
             post={post}
-              // id={post.id}
-              // src='images/img-9.jpg'
-              // text= {post.body}
-              // label={post.title}
-              // path='/services'
+          
             />
            </ul>
           

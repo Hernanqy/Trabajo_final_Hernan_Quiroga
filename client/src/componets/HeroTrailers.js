@@ -4,16 +4,16 @@ import '../App.css';
 import './HeroSection.css';
 
 
-function HeroSection() {
+function HeroTrailers() {
   return (
     
     <div className='hero-container'>
+      <h1>Volver al Futuro</h1>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1> EL CINE EN SU MAXIMA EXPRESION </h1>
-      <p>UN PASAJE A MUNDOS INCREIBLES</p>
-    
+      
+     
     </div>
   );
 }
 
-export default HeroSection;
+export default HeroTrailers;
