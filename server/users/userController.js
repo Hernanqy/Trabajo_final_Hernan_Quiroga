@@ -42,28 +42,6 @@ const listAll =async (req,res, next)=>{
     
 }
 
-//register
-/*/const register = async (req,res,next) =>{
-    console.log("aca estoy")
-const cleanBody =matchedData(req)
-const image = `${public_url}/${req.file.filename}`
-const password = await encrypt(req.body.password)
-const dbResponse = await addNewUser({...cleanBody,password,image })
-console.log(dbResponse)
-    if (dbResponse instanceof Error) return next(dbResponse);
-    
-    const user = {
-        id: cleanBody.id,
-        name : cleanBody.name,
-        email : cleanBody.email
-    
-    }
-
-    const token = await tokenSign(user,"3h")
- 
-    res.status(201).json({message: "User Created", JWT: token})
-    
-} /*/
 
 
 const register = async (req, res, next) => {

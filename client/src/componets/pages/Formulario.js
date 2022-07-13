@@ -2,13 +2,15 @@ import { Formik, Form, Field } from "formik";
 import { usePosts  } from "../../context/postContext";
 import { useNavigate, useParams,Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import validationSchema from "../FormValid";
+
 
 export function Formulario() {
   const { createPost, getPost,updatePost } = usePosts();
   const navigate = useNavigate();
   const params = useParams();
-  console.log("en el paramas",params)
-  const [post, setPosts] = useState({
+  
+  const [post ,setPosts] = useState({
     title: "",
     body: "",
     userid: 24,
@@ -35,11 +37,12 @@ export function Formulario() {
      
       <Formik
         className=" bg-orange-500"
+        validationSchema = {validationSchema}
         initialValues={post}
         onSubmit={async (values, actions) => {
          
           if(params.id) {
-            console.log("esto es el formik", params.id, values)
+            
           await updatePost(params.id, values)
           navigate("/")
           

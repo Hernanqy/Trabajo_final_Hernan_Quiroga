@@ -2,7 +2,7 @@
 import {usePosts} from "../context/postContext"
 import  toast  from "react-hot-toast";
 import { useNavigate,  } from "react-router-dom";
-
+import{Link} from "react-router-dom"
 
 
 export function CardItem({post}) {
@@ -48,7 +48,7 @@ export function CardItem({post}) {
   return (
     <>
       <li className="cards__item">
-        <div className="cards__item__link text-lg text-center bg-yellow-500" to="#"  >
+        <div className="cards__item__link text-lg text-center text-white bg-slate-500" to="#"  >
           <figure className="cards__item__pic-wrap  " data-category={post.title}>
             <img
               className="cards__item__img"
@@ -56,8 +56,8 @@ export function CardItem({post}) {
               src={post.image}
             />
           </figure>
-          <div className="cards__item__info flex justify-between p-1 m-1">
-            <h5 className="cards__item__text">{post.body}</h5>
+          <div className="cards__item__info flex  justify-between p-1 m-1">
+            <h5 className="cards__item__text text-white">{post.body}</h5>
             
             <button
               className="bg-red-500 text-sm px-2 py-1 rounded-xl "
@@ -72,6 +72,12 @@ export function CardItem({post}) {
             >
               Editar
             </button>
+            <Link to="/SignUp" className='flex justify-center' ><button className="m-3 p-2 h-9 w-auto rounded-md transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ...">
+  Buscar por titulo
+</button>
+         </Link>
+              
+          
           </div>
         </div>
       </li>
